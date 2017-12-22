@@ -9,3 +9,17 @@ const result_div = document.querySelector(".result");
 const rock_id = document.getElementById("r");
 const paper_id = document.getElementById("p");
 const scissors_id = document.getElementById("s");
+
+// add event listeners test
+
+rock_id.addEventListener('click',function() {
+    console.log("hey you clicked rock");
+});
+
+paper_id.addEventListener('click',function() {
+    console.log("hey you clicked paper");
+});
+
+scissors_id.addEventListener('click',function() {
+    console.log("hey you clicked scissors");
+})
