@@ -10,16 +10,25 @@ const rock_id = document.getElementById("r");
 const paper_id = document.getElementById("p");
 const scissors_id = document.getElementById("s");
 
-// add event listeners test
+// test function
 
-rock_id.addEventListener('click',function() {
-    console.log("hey you clicked rock");
-});
+function game(userChoice) {
+    console.log("test " + userChoice);
+}
 
-paper_id.addEventListener('click',function() {
-    console.log("hey you clicked paper");
-});
+function main(){
+    rock_id.addEventListener('click',function() {
+        game("r");
+    });
+    
+    paper_id.addEventListener('click',function() {
+        game("p");
+    });
+    
+    scissors_id.addEventListener('click',function() {
+        game("s");
+    })
 
-scissors_id.addEventListener('click',function() {
-    console.log("hey you clicked scissors");
-})
+}
+
+main();
