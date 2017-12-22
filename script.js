@@ -12,6 +12,12 @@ const scissors_id = document.getElementById("s");
 
 // test function
 
+function getComputerChoice() {
+    const choices = ['r', 'p', 's'];
+    console.log(Math.random() * 3);
+}
+getComputerChoice();
+
 function game(userChoice) {
     console.log("test " + userChoice);
 }
