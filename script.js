@@ -20,7 +20,12 @@ function getComputerChoice() {
 console.log(getComputerChoice());
 
 function game(userChoice) {
+    const computerChoice = getComputerChoice();
+    console.log("user choice => " + userChoice);
+    console.log("computer choice => " + computerChoice);
+
 }
+
 
 function main(){
     rock_id.addEventListener('click',function() {
@@ -38,3 +43,5 @@ function main(){
 }
 
 main();
+
+
