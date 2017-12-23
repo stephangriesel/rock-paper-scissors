@@ -21,8 +21,15 @@ console.log(getComputerChoice());
 
 function game(userChoice) {
     const computerChoice = getComputerChoice();
-    const name = "david";
-
+    const name = "pine";
+    switch (name) {
+        case "apple":
+            console.log("this is a apple");
+            break;
+        case "pine":
+            console.log("testtest");
+            break;
+    }
 }
 
 
