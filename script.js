@@ -21,8 +21,7 @@ console.log(getComputerChoice());
 
 function game(userChoice) {
     const computerChoice = getComputerChoice();
-    console.log("user choice => " + userChoice);
-    console.log("computer choice => " + computerChoice);
+    const name = "david";
 
 }
 
