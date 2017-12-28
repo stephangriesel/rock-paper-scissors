@@ -19,23 +19,35 @@ function getComputerChoice() {
 }
 console.log(getComputerChoice());
 
+function win() {
+    console.log("win");
+}
+
+function loose() {
+    console.log("lost");
+}
+
+function draw() {
+    console.log("draw");
+}
+
 function game(userChoice) {
     const computerChoice = getComputerChoice();
     switch (userChoice + computerChoice) {
         case "rs":
         case "pr":
         case "sp":
-            console.log("USER WINS");
+            win();
             break;
         case "rp":
         case "ps":
         case "sr":
-            console.log("COMPUTER WINS");
+            loose();
             break;
         case "rr":
+        case "pp":
         case "ss":
-        case "ss":
-            console.log("ITS A DRAW");
+            draw();
             break;
     }
 }
@@ -59,3 +71,4 @@ function main(){
 main();
 
 
+// 26.55
