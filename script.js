@@ -1,7 +1,7 @@
 // caching the dom...
 
-const userScore = 0;
-const computerScore = 0;
+let userScore = 0;
+let computerScore = 0;
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
 const scoreBoard_div = document.querySelector(".score-board");
@@ -19,8 +19,13 @@ function getComputerChoice() {
 }
 console.log(getComputerChoice());
 
-function win() {
-    console.log("win");
+function win(userChoice, computerChoice) {
+    userScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    console.log(userChoice);
+    console.log(computerChoice);
+
 }
 
 function loose() {
@@ -37,17 +42,17 @@ function game(userChoice) {
         case "rs":
         case "pr":
         case "sp":
-            win();
+            win(userChoice, computerChoice);
             break;
         case "rp":
         case "ps":
         case "sr":
-            loose();
+            loose(userChoice, computerChoice);
             break;
         case "rr":
         case "pp":
         case "ss":
-            draw();
+            draw(userChoice, computerChoice);
             break;
     }
 }
@@ -71,4 +76,4 @@ function main(){
 main();
 
 
-// 26.55
+// 33.22
