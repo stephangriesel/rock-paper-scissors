@@ -5,7 +5,7 @@ let computerScore = 0;
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
 const scoreBoard_div = document.querySelector(".score-board");
-const result_div = document.querySelector(".result > p");
+const result_p = document.querySelector(".result > p");
 const rock_id = document.getElementById("r");
 const paper_id = document.getElementById("p");
 const scissors_id = document.getElementById("s");
@@ -17,13 +17,18 @@ function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
     return choices[randomNumber];
 }
-console.log(getComputerChoice());
+
+function convertToWord (letter) {
+    if (letter === "r") return "Rock";
+    if (letter === "p") return "Paper";
+    return "Scissors"; 
+}
 
 function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_div.innerHTML = userChoice + " beats " + computerChoice + ", You win!";
+    result_p.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + ", You win!";
 
 }
 
