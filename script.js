@@ -80,18 +80,9 @@ function game(userChoice) {
 
 
 function main(){
-    rock_id.addEventListener('click',function() {
-        game("r");
-    });
-    
-    paper_id.addEventListener('click',function() {
-        game("p");
-    });
-    
-    scissors_id.addEventListener('click',function() {
-        game("s");
-    })
-
+    rock_id.addEventListener('click',() => game("r"));
+    paper_id.addEventListener('click',() => game("p"));
+    scissors_id.addEventListener('click',() => game("s"));
 }
 
 main();
