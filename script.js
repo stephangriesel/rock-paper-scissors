@@ -33,7 +33,7 @@ function win(userChoice, computerChoice) {
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. You win!`;
     userChoice_div.classList.add('green-border');
-    setTimeout(function() { userChoice_div.classList.remove('green-border')}, 300);
+    setTimeout(() => userChoice_div.classList.remove('green-border'), 300);
 }
 
 function loose(userChoice, computerChoice) {
@@ -45,7 +45,7 @@ function loose(userChoice, computerChoice) {
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord}. You lost!`;
     userChoice_div.classList.add('red-border');
-    setTimeout(function() { userChoice_div.classList.remove('red-border')}, 300);
+    setTimeout(() => userChoice_div.classList.remove('red-border'), 300);
 }
 
 function draw(userChoice, computerChoice) {
@@ -54,7 +54,7 @@ function draw(userChoice, computerChoice) {
     const userChoice_div = document.getElementById(userChoice);
     result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals ${convertToWord(computerChoice)}${smallCompWord}. Its a draw!`;
     userChoice_div.classList.add('gray-border');
-    setTimeout(function() { userChoice_div.classList.remove('gray-border')}, 300);
+    setTimeout(() => userChoice_div.classList.remove('gray-border'), 300);
 }
 
 function game(userChoice) {
