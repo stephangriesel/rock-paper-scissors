@@ -25,19 +25,36 @@ function convertToWord (letter) {
 }
 
 function win(userChoice, computerChoice) {
+    const smallUserWord = "user".fontsize(3).sup();
+    const smallCompWord = "comp".fontsize(3).sup();
+    const userChoice_div = document.getElementById(userChoice);
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + ", You win!";
-
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. You win!`;
+    userChoice_div.classList.add('green-border');
+    setTimeout(function() { userChoice_div.classList.remove('green-border')}, 300);
 }
 
-function loose() {
-    console.log("lost");
+function loose(userChoice, computerChoice) {
+    const smallUserWord = "user".fontsize(3).sup();
+    const smallCompWord = "comp".fontsize(3).sup();
+    const userChoice_div = document.getElementById(userChoice);
+    computerScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord}. You lost!`;
+    userChoice_div.classList.add('red-border');
+    setTimeout(function() { userChoice_div.classList.remove('red-border')}, 300);
 }
 
-function draw() {
-    console.log("draw");
+function draw(userChoice, computerChoice) {
+    const smallUserWord = "user".fontsize(3).sup();
+    const smallCompWord = "comp".fontsize(3).sup();
+    const userChoice_div = document.getElementById(userChoice);
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals ${convertToWord(computerChoice)}${smallCompWord}. Its a draw!`;
+    userChoice_div.classList.add('gray-border');
+    setTimeout(function() { userChoice_div.classList.remove('gray-border')}, 300);
 }
 
 function game(userChoice) {
@@ -79,5 +96,3 @@ function main(){
 
 main();
 
-
-// 33.22
